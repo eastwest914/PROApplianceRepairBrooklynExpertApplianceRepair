@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>PRO Appliance Repair Brooklyn | Expert Appliance Repair | Brooklyn, NY</title>
+<meta name="description" content="Professional appliance repair in Brooklyn, NY. Certified technicians at 1433-1447 Rockaway Pkwy Suite 1441, Brooklyn, NY 11236. Call 929-437-6568. Mon-Sun 8am-6pm."/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Calibri',sans-serif;font-weight:400;color:#1e293b;background:#f8fafc}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+header{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08);position:sticky;top:0;z-index:100}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.header-phone{display:flex;align-items:center;gap:6px;color:#0099cc;font-weight:700;font-size:15px;white-space:nowrap}
+nav{display:flex;align-items:center;gap:4px}
+nav a{padding:8px 13px;border-radius:8px;font-size:15px;color:#334155;font-weight:600;transition:background .2s,color .2s}
+nav a:hover,nav a.active{background:#e0f5ff;color:#0099cc}
+.header-right{display:flex;align-items:center;gap:12px}
+.logo-wrap{display:flex;align-items:center;gap:10px}
+.logo-wrap img{height:44px;width:auto;border-radius:8px}
+.logo-name{font-size:13px;font-weight:700;color:#1e293b;line-height:1.2;max-width:130px}
+.btn-book{background:linear-gradient(135deg,#0099cc,#0077aa);color:#fff;padding:9px 18px;border-radius:24px;font-size:14px;font-weight:700;white-space:nowrap;border:none;cursor:pointer;transition:opacity .2s}
+.btn-book:hover{opacity:.88}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+.hamburger span{width:24px;height:2px;background:#1e293b;border-radius:2px}
+
+.page{display:none}
+.page.active{display:block}
+
+.hero{background:linear-gradient(135deg,#005f80 0%,#0099cc 100%);color:#fff;padding:90px 20px 80px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("http://proappliancerepairbrooklyn.com/img/bg.jpg") center/cover no-repeat;opacity:.2}
+.hero-inner{position:relative;max-width:860px;margin:0 auto}
+.hero h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.2;margin-bottom:20px}
+.hero p{font-size:clamp(1rem,2.5vw,1.2rem);opacity:.92;max-width:660px;margin:0 auto 34px}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,#0099cc,#0077aa);color:#fff;padding:14px 30px;border-radius:30px;font-size:16px;font-weight:700;transition:transform .2s,opacity .2s;display:inline-block}
+.btn-primary:hover{transform:translateY(-2px);opacity:.9}
+.btn-outline{border:2px solid #fff;color:#fff;padding:13px 28px;border-radius:30px;font-size:16px;font-weight:700;transition:background .2s;display:inline-block}
+.btn-outline:hover{background:rgba(255,255,255,.15)}
+.trust-bar{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-top:50px;padding-top:40px;border-top:1px solid rgba(255,255,255,.2)}
+.trust-item{display:flex;flex-direction:column;align-items:center;gap:6px}
+.trust-item strong{font-size:1.6rem;font-weight:800}
+.trust-item span{font-size:.85rem;opacity:.85}
+
+section{padding:72px 20px}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-tag{display:inline-block;background:#e0f5ff;color:#0099cc;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:4px 12px;border-radius:20px;margin-bottom:12px}
+.section-title{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;color:#1e293b;margin-bottom:14px}
+.section-sub{font-size:1.05rem;color:#64748b;max-width:620px}
+
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:48px}
+.intro-img{border-radius:20px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.12)}
+.intro-img img{width:100%;height:380px;object-fit:cover}
+.intro-text p{font-size:1.02rem;line-height:1.8;color:#475569;margin-bottom:16px}
+.feature-list{list-style:none;margin-top:20px;display:flex;flex-direction:column;gap:10px}
+.feature-list li{display:flex;align-items:center;gap:10px;font-size:1rem;color:#334155}
+.check-icon{width:20px;height:20px;background:#0099cc;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:48px}
+.prod-card{background:#fff;border-radius:18px;box-shadow:0 4px 20px rgba(0,0,0,.07);overflow:hidden;transition:transform .25s,box-shadow .25s}
+.prod-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,0,0,.12)}
+.prod-card img{width:100%;height:200px;object-fit:cover}
+.prod-body{padding:20px}
+.prod-body h3{font-size:1.1rem;font-weight:700;color:#1e293b;margin-bottom:8px}
+.prod-body p{font-size:.93rem;line-height:1.65;color:#475569;margin-bottom:14px}
+.btn-sm{display:inline-block;background:linear-gradient(135deg,#0099cc,#0077aa);color:#fff;padding:9px 20px;border-radius:20px;font-size:.88rem;font-weight:700;transition:opacity .2s}
+.btn-sm:hover{opacity:.85}
+
+.svc-block{background:#fff;border-radius:20px;box-shadow:0 4px 24px rgba(0,0,0,.07);overflow:hidden;margin-bottom:32px;display:grid;grid-template-columns:1fr 1fr}
+.svc-block img{width:100%;height:320px;object-fit:cover}
+.svc-body{padding:36px;display:flex;flex-direction:column;justify-content:center}
+.svc-body h2{font-size:1.45rem;font-weight:800;color:#1e293b;margin:10px 0 14px}
+.svc-body p{font-size:.97rem;line-height:1.8;color:#475569;margin-bottom:20px}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;margin-top:48px}
+.about-img{border-radius:20px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.1)}
+.about-img img{width:100%;height:420px;object-fit:cover}
+.about-text p{font-size:1.02rem;line-height:1.85;color:#475569;margin-bottom:18px}
+.values-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.value-card{background:#f8fafc;border-radius:14px;padding:18px;border:1px solid #e2e8f0}
+.value-card h4{font-size:1rem;font-weight:700;color:#1e293b;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.value-card p{font-size:.9rem;color:#64748b;line-height:1.6}
+
+.faq-list{max-width:760px;margin:40px auto 0;display:flex;flex-direction:column;gap:14px}
+.faq-item{border:1px solid #e2e8f0;border-radius:14px;overflow:hidden}
+.faq-q{padding:18px 22px;font-weight:700;font-size:1rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;background:#fff;user-select:none}
+.faq-q:hover{background:#f8fafc}
+.faq-a{padding:0 22px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s}
+.faq-a.open{max-height:220px;padding:0 22px 18px}
+.faq-a p{font-size:.97rem;line-height:1.75;color:#475569}
+.faq-arrow{transition:transform .3s;flex-shrink:0}
+.faq-arrow.open{transform:rotate(180deg)}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px}
+.contact-form-card{background:#fff;border-radius:20px;box-shadow:0 4px 24px rgba(0,0,0,.07);padding:36px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:.9rem;font-weight:700;color:#374151;margin-bottom:6px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 14px;border:1.5px solid #e2e8f0;border-radius:10px;font-family:'Calibri',sans-serif;font-size:.97rem;color:#1e293b;outline:none;transition:border .2s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#0099cc}
+.form-group textarea{resize:vertical;min-height:110px}
+.btn-submit{width:100%;background:linear-gradient(135deg,#0099cc,#0077aa);color:#fff;border:none;padding:14px;border-radius:12px;font-size:1.05rem;font-weight:700;cursor:pointer;font-family:'Calibri',sans-serif;transition:opacity .2s}
+.btn-submit:hover{opacity:.88}
+.info-item{display:flex;gap:14px;align-items:flex-start;margin-bottom:22px}
+.info-icon{width:44px;height:44px;background:#e0f5ff;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.info-item p{font-size:.95rem;color:#475569;line-height:1.6}
+.info-item strong{display:block;color:#1e293b;font-size:1rem;margin-bottom:2px}
+.map-wrap{margin-top:24px;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.map-wrap iframe{width:100%;display:block}
+
+footer{background:#0f172a;color:#cbd5e1;padding:56px 20px 28px}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:40px}
+.footer-brand img{height:44px;margin-bottom:16px;border-radius:8px}
+.footer-brand p{font-size:.93rem;line-height:1.7;color:#94a3b8;max-width:280px}
+.footer-col h4{font-size:.95rem;font-weight:700;color:#fff;margin-bottom:16px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-col ul li a{font-size:.9rem;color:#94a3b8;transition:color .2s}
+.footer-col ul li a:hover{color:#0099cc}
+.footer-contact-item{display:flex;align-items:flex-start;gap:8px;margin-bottom:12px;font-size:.9rem;color:#94a3b8}
+.footer-bottom{max-width:1200px;margin:40px auto 0;padding-top:24px;border-top:1px solid #1e293b;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:.85rem;color:#64748b}
+
+.float-call{position:fixed;bottom:28px;right:28px;z-index:200;background:linear-gradient(135deg,#0099cc,#0077aa);color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(0,153,204,.45);animation:pulse 2.5s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 6px 24px rgba(0,153,204,.45)}50%{box-shadow:0 6px 36px rgba(0,119,170,.65)}}
+
+@media(max-width:900px){
+  .intro-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .svc-block{grid-template-columns:1fr}
+  .svc-block img{height:240px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .values-grid{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  .hamburger{display:flex}
+  nav{display:none;position:absolute;top:72px;left:0;right:0;background:#fff;flex-direction:column;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,.1)}
+  nav.open{display:flex}
+  nav a{padding:12px 16px;border-radius:10px}
+  .header-phone span{display:none}
+  .logo-name{display:none}
+  .btn-book{padding:8px 14px;font-size:13px}
+  .footer-grid{grid-template-columns:1fr}
+  .trust-bar{gap:20px}
+  .svc-block{grid-template-columns:1fr !important}
+  .svc-block img{height:220px !important}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a class="header-phone" href="tel:+19294376568">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      <span>929-437-6568</span>
+    </a>
+    <nav id="mainNav">
+      <a href="#" class="nav-link active" onclick="showPage('home',this);return false;">Home</a>
+      <a href="#" class="nav-link" onclick="showPage('about',this);return false;">About</a>
+      <a href="#" class="nav-link" onclick="showPage('services',this);return false;">Services</a>
+      <a href="#" class="nav-link" onclick="showPage('contact',this);return false;">Contact</a>
+    </nav>
+    <div class="header-right">
+      <div class="logo-wrap">
+        <img src="https://www.marsappliances.com/img/logo.png" alt="PRO Appliance Repair Brooklyn Logo" onerror="this.style.display='none'"/>
+        <span class="logo-name">PRO Appliance Repair Brooklyn</span>
+      </div>
+      <button class="btn-book" onclick="showPage('contact',null)">Book Repair</button>
+      <div class="hamburger" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HOME -->
+<div id="home" class="page active">
+  <div class="hero">
+    <div class="hero-inner">
+      <h1>PRO Appliance Repair Brooklyn — Your Trusted Local Repair Experts</h1>
+      <p>Your trusted solution for all things appliance-related is just a call away! At PRO Appliance Repair Brooklyn, we pride ourselves on delivering top-notch service with a team of skilled technicians ready to revive your malfunctioning appliances.</p>
+      <div class="hero-btns">
+        <a class="btn-primary" href="tel:+19294376568">Call 929-437-6568</a>
+        <a class="btn-outline" href="#" onclick="showPage('services',null);return false;">Our Services</a>
+      </div>
+      <div class="trust-bar">
+        <div class="trust-item"><strong>5,000+</strong><span>Repairs Completed</span></div>
+        <div class="trust-item"><strong>All Brands</strong><span>Serviced</span></div>
+        <div class="trust-item"><strong>Same Day</strong><span>Service Available</span></div>
+        <div class="trust-item"><strong>5-Star</strong><span>Rated in Brooklyn</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section style="background:#fff">
+    <div class="section-inner">
+      <div style="text-align:center">
+        <span class="section-tag">Why Choose Us</span>
+        <h2 class="section-title">Brooklyn's Trusted Appliance Repair Specialists</h2>
+        <p class="section-sub" style="margin:0 auto">Our team comprises certified and experienced technicians, ensuring that your appliances are in capable hands. From diagnosis to repair, we prioritize precision and expertise.</p>
+      </div>
+      <div class="intro-grid">
+        <div class="intro-img">
+          <img src="http://proappliancerepairbrooklyn.com/img/main/everything__img.webp" alt="Appliance Repair Brooklyn NY" loading="lazy" onerror="this.src='https://www.marsappliances.com/img/online/image.webp'"/>
+        </div>
+        <div class="intro-text">
+          <p>Your trusted solution for all things appliance-related is just a call away! We understand the impact of a malfunctioning appliance on your daily routine. Expect swift responses and efficient repairs that minimize downtime, getting your appliances back to peak performance.</p>
+          <p>Our team comprises certified and experienced technicians ensuring that your appliances are in capable hands. From diagnosis to repair, we prioritize precision and expertise for every job we take on in Brooklyn and the surrounding areas.</p>
+          <p>Located at 1433-1447 Rockaway Pkwy Suite 1441 in Brooklyn, we serve residential and commercial clients throughout Brooklyn, Manhattan, Queens and all NYC boroughs. We offer same-day and next-day appointments Monday through Sunday, 8am to 6pm.</p>
+          <ul class="feature-list">
+            <li><div class="check-icon"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Certified and experienced appliance technicians</li>
+            <li><div class="check-icon"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>All makes and models repaired</li>
+            <li><div class="check-icon"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Swift response times — same-day service available</li>
+            <li><div class="check-icon"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Available 7 days a week, 8am to 6pm</li>
+            <li><div class="check-icon"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><polyline points="2,6 5,9 10,3" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>Transparent pricing — no hidden fees</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#f8fafc">
+    <div class="section-inner">
+      <div style="text-align:center">
+        <span class="section-tag">Our Services</span>
+        <h2 class="section-title">Expert Repair Services for Every Home Appliance</h2>
+        <p class="section-sub" style="margin:0 auto">From refrigerators and washers to dryers and dishwashers — our technicians handle every appliance repair with precision and care.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="prod-card">
+          <img src="http://proappliancerepairbrooklyn.com/img/online/image.webp" alt="Refrigerator Repair Brooklyn" loading="lazy" onerror="this.src='https://www.marsappliances.com/img/main/freezer__img.webp'"/>
+          <div class="prod-body">
+            <h3>Refrigerator Repair</h3>
+            <p>Not cooling properly? Leaking water? Our refrigerator repair experts diagnose and fix all fridge issues fast across all major brands in Brooklyn.</p>
+            <a class="btn-sm" href="#" onclick="showPage('services',null);return false;">Learn More</a>
+          </div>
+        </div>
+        <div class="prod-card">
+          <img src="http://proappliancerepairbrooklyn.com/img/guarantee/image.webp" alt="Washer Dryer Repair Brooklyn" loading="lazy" onerror="this.src='https://www.marsappliances.com/img/main/refrigerator.webp'"/>
+          <div class="prod-body">
+            <h3>Washer & Dryer Repair</h3>
+            <p>Not spinning, not draining, or making strange noises? We repair all washer and dryer brands quickly and affordably throughout Brooklyn.</p>
+            <a class="btn-sm" href="#" onclick="showPage('services',null);return false;">Learn More</a>
+          </div>
+        </div>
+        <div class="prod-card">
+          <img src="http://proappliancerepairbrooklyn.com/img/advantages/image.webp" alt="Dishwasher Oven Repair Brooklyn" loading="lazy" onerror="this.src='https://www.marsappliances.com/img/main/hood.png'"/>
+          <div class="prod-body">
+            <h3>Oven, Stove & Dishwasher</h3>
+            <p>Broken igniters, faulty heating elements, dishwasher not cleaning — we fix all kitchen appliances safely and efficiently for Brooklyn homes.</p>
+            <a class="btn-sm" href="#" onclick="showPage('services',null);return false;">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:36px">
+        <a class="btn-primary" href="#" onclick="showPage('services',null);return false;">See All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:linear-gradient(135deg,#005f80,#0099cc);padding:64px 20px;text-align:center">
+    <div class="section-inner">
+      <h2 style="font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;color:#fff;margin-bottom:16px">Appliance Acting Up? We Can Fix It Today.</h2>
+      <p style="color:rgba(255,255,255,.88);font-size:1.05rem;max-width:560px;margin:0 auto 32px">Call us now or book online. Our Brooklyn team is ready to restore your appliances to full working order — often the same day you call.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a class="btn-primary" href="tel:+19294376568">Call 929-437-6568</a>
+        <a class="btn-outline" href="#" onclick="showPage('contact',null);return false;">Book a Repair</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="page">
+  <div style="background:linear-gradient(135deg,#005f80,#0099cc);padding:64px 20px 56px;text-align:center">
+    <span class="section-tag" style="background:rgba(255,255,255,.2);color:#fff">About Us</span>
+    <h1 style="color:#fff;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-top:10px">About PRO Appliance Repair Brooklyn</h1>
+    <p style="color:rgba(255,255,255,.88);font-size:1.05rem;max-width:580px;margin:14px auto 0">Brooklyn's dedicated appliance repair specialists — bringing your home appliances back to life</p>
+  </div>
+
+  <section style="background:#f1f5f9">
+    <div class="section-inner">
+      <div class="about-grid">
+        <div>
+          <span class="section-tag">Our Story</span>
+          <h2 class="section-title">Built for Brooklyn, Trusted by NYC Families</h2>
+          <div class="about-text">
+            <p>PRO Appliance Repair Brooklyn was founded with a clear mission: to provide Brooklyn residents and businesses with the fastest, most reliable appliance repair service available. Your trusted solution for all things appliance-related is just a call away — and we mean it.</p>
+            <p>We pride ourselves on delivering top-notch service with a team of skilled technicians ready to revive your malfunctioning appliances. Our team comprises certified and experienced technicians, ensuring that your appliances are in capable hands from the moment we arrive at your door.</p>
+            <p>From our location at 1433-1447 Rockaway Pkwy Suite 1441 in Brooklyn, we serve customers across Brooklyn, Manhattan, Queens, the Bronx and Staten Island. We work with homeowners, renters, restaurants and commercial kitchens — any setting where functional appliances are essential to daily life.</p>
+            <p>We understand the impact of a malfunctioning appliance on your daily routine. That is why we offer swift response times and efficient repairs that minimize downtime, getting your appliances back to peak performance as quickly as possible.</p>
+          </div>
+          <div class="values-grid">
+            <div class="value-card">
+              <h4><svg width="18" height="18" fill="none" stroke="#0099cc" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Certified Experts</h4>
+              <p>Our technicians are certified and experienced, ensuring every repair is handled with precision and skill.</p>
+            </div>
+            <div class="value-card">
+              <h4><svg width="18" height="18" fill="none" stroke="#0099cc" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Swift Response</h4>
+              <p>We understand urgency. Same-day and next-day appointments available 7 days a week across Brooklyn.</p>
+            </div>
+            <div class="value-card">
+              <h4><svg width="18" height="18" fill="none" stroke="#0099cc" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Honest Pricing</h4>
+              <p>Transparent, upfront quotes with no hidden charges. You know the cost before we start any work.</p>
+            </div>
+            <div class="value-card">
+              <h4><svg width="18" height="18" fill="none" stroke="#0099cc" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>Brooklyn Community</h4>
+              <p>Proudly serving all five boroughs — a trusted local Brooklyn business that cares about our neighbors.</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="about-img">
+            <img src="http://proappliancerepairbrooklyn.com/img/online/image.webp" alt="PRO Appliance Repair Brooklyn Technician" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80'"/>
+          </div>
+          <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,.07);margin-top:24px">
+            <h3 style="font-weight:700;color:#1e293b;margin-bottom:14px">Our Repair Philosophy</h3>
+            <p style="font-size:.97rem;line-height:1.75;color:#475569">We believe a good repair starts with an accurate diagnosis. Before touching any appliance, our technicians take the time to understand what went wrong and why. We then provide a clear explanation and a fair quote. Only when you approve do we begin the work — always using quality parts and proven techniques that ensure your appliance lasts for years to come.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#fff;padding:72px 20px">
+    <div class="section-inner" style="text-align:center">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-sub" style="margin:0 auto">Common questions about our appliance repair services in Brooklyn, NY.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What types of appliances do you repair?<svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0099cc" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="faq-a"><p>We repair a wide range of home and commercial appliances including refrigerators, washers, dryers, dishwashers, ovens, ranges, stoves, microwaves, freezers and more. We service all major brands including GE, Samsung, LG, Whirlpool, Bosch, Maytag, Kenmore, Frigidaire and many others.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How quickly can you come for a repair?<svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0099cc" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="faq-a"><p>We offer same-day and next-day appointments throughout the week. Our technicians are available Monday through Sunday from 8am to 6pm. We understand that a malfunctioning appliance impacts your daily routine, and we do our best to respond as quickly as possible.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Do you charge a diagnostic fee?<svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0099cc" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="faq-a"><p>We charge a service call fee which covers the visit and diagnosis. This fee is typically applied toward the total cost of the repair if you choose to proceed. We always provide a clear, upfront quote before beginning any repair work — no surprises on your final bill.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Do you service areas outside Brooklyn?<svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0099cc" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="faq-a"><p>Yes, while Brooklyn is our home base, we also serve customers throughout Manhattan, Queens, the Bronx and Staten Island. Our Rockaway Pkwy location allows us to reach customers across the entire NYC metro area quickly and efficiently.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Is it worth repairing my appliance or should I replace it?<svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0099cc" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div>
+        <div class="faq-a"><p>In most cases, repair is significantly more cost-effective than replacement, especially for appliances less than 10 years old. Our technicians will give you an honest assessment — if the repair cost approaches the value of the appliance, we will tell you so. We never recommend repairs that don't make financial sense for our customers.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- SERVICES -->
+<div id="services" class="page">
+  <div style="background:linear-gradient(135deg,#005f80,#0099cc);padding:64px 20px 56px;text-align:center">
+    <span class="section-tag" style="background:rgba(255,255,255,.2);color:#fff">Our Services</span>
+    <h1 style="color:#fff;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-top:10px">Appliance Repair Services in Brooklyn, NY</h1>
+    <p style="color:rgba(255,255,255,.88);font-size:1.05rem;max-width:580px;margin:14px auto 0">Professional appliance repair for all makes and models — serving Brooklyn and all NYC boroughs</p>
+  </div>
+
+  <section style="background:#f8fafc;padding:72px 20px">
+    <div class="section-inner">
+
+      <div class="svc-block">
+        <img src="http://proappliancerepairbrooklyn.com/img/main/refrigerator.webp" alt="Refrigerator Repair Brooklyn NY" loading="lazy" onerror="this.src='https://www.marsappliances.com/img/main/hood.png'"/>
+        <div class="svc-body">
+          <span class="section-tag">Service 01</span>
+          <h2>Refrigerator Repair</h2>
+          <p>Is your refrigerator not cooling, making unusual noises, leaking water or freezing food? Our refrigerator repair specialists diagnose and resolve every type of fridge issue — from faulty compressors and thermostat problems to ice maker failures and door seal replacements. We service all refrigerator types including top-freezer, bottom-freezer, side-by-side and French door models from every major brand. Most repairs are completed in a single visit because we stock a comprehensive range of replacement parts, minimizing your downtime and keeping your food fresh.</p>
+          <a class="btn-sm" style="align-self:flex-start" href="#" onclick="showPage('contact',null);return false;">Book Repair</a>
+        </div>
+      </div>
+
+      <div class="svc-block">
+        <div class="svc-body">
+          <span class="section-tag">Service 02</span>
+          <h2>Washer & Dryer Repair</h2>
+          <p>A broken washer or dryer can disrupt your entire household routine. Whether your washing machine won't spin, won't drain, is leaking or making loud banging sounds — or your dryer won't heat, won't start or is taking too long to dry — our certified technicians have the expertise and parts to get it working again fast. We repair all washer and dryer types including top-load, front-load, stackable units and combination washer-dryers from leading brands like Samsung, LG, Whirlpool, Maytag, GE and more throughout Brooklyn and all NYC boroughs.</p>
+          <a class="btn-sm" style="align-self:flex-start" href="#" onclick="showPage('contact',null);return false;">Book Repair</a>
+        </div>
+        <img src="http://proappliancerepairbrooklyn.com/img/main/dryer.webp" alt="Washer Dryer Repair Brooklyn" loading="lazy" onerror="this.src='https://www.marsappliances.com/img/main/dishwasher.webp'"/>
+      </div>
+
+      <div class="svc-block">
+        <img src="http://proappliancerepairbrooklyn.com/img/main/cooktop.webp" alt="Oven Stove Repair Brooklyn NY" loading="lazy" onerror="this.src='https://www.marsappliances.com/img/main/refrigerator.webp'"/>
+        <div class="svc-body">
+          <span class="section-tag">Service 03</span>
+          <h2>Oven, Range & Stove Repair</h2>
+          <p>Stove burners not igniting, oven not heating evenly, range displaying error codes? Our appliance technicians handle all oven, range and stove repairs safely and efficiently. We work on gas, electric and induction models from all major manufacturers. We prioritize safety above everything, especially when dealing with gas appliances. Our technicians are trained to identify and resolve all issues correctly, ensuring your kitchen is not just functional but completely safe to use. Same-day repair is available across Brooklyn and all five NYC boroughs.</p>
+          <a class="btn-sm" style="align-self:flex-start" href="#" onclick="showPage('contact',null);return false;">Book Repair</a>
+        </div>
+      </div>
+
+      <div class="svc-block">
+        <div class="svc-body">
+          <span class="section-tag">Service 04</span>
+          <h2>Dishwasher Repair</h2>
+          <p>A malfunctioning dishwasher is more than an inconvenience — it disrupts your kitchen routine and can lead to water damage if left unaddressed. Our dishwasher repair service covers all common issues including not cleaning dishes properly, not draining, leaking water, not filling, door latch problems and control panel failures. We service all major brands including Bosch, KitchenAid, Whirlpool, GE, Samsung, LG and Miele. Most dishwasher repairs in Brooklyn are completed the same day, restoring your kitchen to full working order quickly and affordably.</p>
+          <a class="btn-sm" style="align-self:flex-start" href="#" onclick="showPage('contact',null);return false;">Book Repair</a>
+        </div>
+        <img src="http://proappliancerepairbrooklyn.com/img/main/freezer__img.webp" alt="Dishwasher Repair Brooklyn NY" loading="lazy" onerror="this.src='https://www.marsappliances.com/img/main/oven.webp'"/>
+      </div>
+
+      <div class="svc-block">
+        <img src="http://proappliancerepairbrooklyn.com/img/main/oven.webp" alt="Appliance Maintenance Brooklyn NY" loading="lazy" onerror="this.src='https://www.marsappliances.com/img/main/washer.webp'"/>
+        <div class="svc-body">
+          <span class="section-tag">Service 05</span>
+          <h2>Appliance Maintenance & Tune-Up</h2>
+          <p>Preventive maintenance is the most cost-effective way to extend the life of your home appliances and avoid unexpected breakdowns. Our maintenance service includes a thorough inspection of all components, cleaning of key parts, calibration of settings, tightening of connections and testing of all functions. We identify worn parts before they fail and recommend affordable solutions that prevent major repairs down the line. Whether you are a homeowner wanting to protect your appliance investment or a landlord managing multiple units in Brooklyn, our maintenance program delivers real long-term value.</p>
+          <a class="btn-sm" style="align-self:flex-start" href="#" onclick="showPage('contact',null);return false;">Book Service</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="page">
+  <div style="background:linear-gradient(135deg,#005f80,#0099cc);padding:64px 20px 56px;text-align:center">
+    <span class="section-tag" style="background:rgba(255,255,255,.2);color:#fff">Get in Touch</span>
+    <h1 style="color:#fff;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-top:10px">Contact PRO Appliance Repair Brooklyn</h1>
+    <p style="color:rgba(255,255,255,.88);font-size:1.05rem;max-width:580px;margin:14px auto 0">Call us, visit our Brooklyn location, or send a message. We respond promptly and are ready to schedule your repair today.</p>
+  </div>
+
+  <section style="background:#f8fafc;padding:72px 20px">
+    <div class="section-inner">
+      <p style="font-size:1.02rem;line-height:1.8;color:#475569;max-width:820px;margin:0 auto 48px">Ready to get your appliance repaired? Our team serves Brooklyn and all NYC boroughs with same-day and next-day appointments available Monday through Sunday, 8am to 6pm. Call us at 929-437-6568, visit our location at 1433-1447 Rockaway Pkwy Suite 1441, Brooklyn, NY 11236 or fill out the form below and we will be in touch shortly to confirm your appointment.</p>
+      <div class="contact-grid">
+        <div class="contact-form-card">
+          <h2 style="font-size:1.4rem;font-weight:800;color:#1e293b;margin-bottom:24px">Book a Repair</h2>
+          <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your full name"/></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="Your phone number"/></div>
+          <div class="form-group"><label>Email Address</label><input type="email" placeholder="Your email address"/></div>
+          <div class="form-group">
+            <label>Appliance Type</label>
+            <select>
+              <option value="">Select appliance</option>
+              <option>Refrigerator</option>
+              <option>Washer</option>
+              <option>Dryer</option>
+              <option>Dishwasher</option>
+              <option>Oven / Range / Stove</option>
+              <option>Freezer</option>
+              <option>Microwave</option>
+              <option>Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Describe the Problem</label><textarea placeholder="Tell us what's wrong — e.g. not cooling, not spinning, won't start, error code, etc."></textarea></div>
+          <button class="btn-submit" onclick="handleSubmit(this)">Book My Repair</button>
+        </div>
+        <div>
+          <h3 style="font-size:1.3rem;font-weight:700;color:#1e293b;margin-bottom:20px">Contact Information</h3>
+          <div class="info-item">
+            <div class="info-icon"><svg width="20" height="20" fill="none" stroke="#0099cc" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div><strong>Phone</strong><p><a href="tel:+19294376568" style="color:#0099cc">929-437-6568</a></p></div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><svg width="20" height="20" fill="none" stroke="#0099cc" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><strong>Address</strong><p>1433-1447 Rockaway Pkwy, Suite 1441<br/>Brooklyn, NY 11236</p></div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><svg width="20" height="20" fill="none" stroke="#0099cc" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><strong>Website</strong><p><a href="http://proappliancerepairbrooklyn.com/" target="_blank" rel="noopener" style="color:#0099cc">proappliancerepairbrooklyn.com</a></p></div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><svg width="20" height="20" fill="none" stroke="#0099cc" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><strong>Hours</strong><p>Monday – Sunday<br/>8:00 AM – 6:00 PM</p></div>
+          </div>
+          <div class="map-wrap">
+            <iframe src="https://www.google.com/maps?cid=9591533498635427063&output=embed" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="http://proappliancerepairbrooklyn.com/img/logo.png" alt="PRO Appliance Repair Brooklyn Logo" onerror="this.style.display='none'"/>
+      <p>PRO Appliance Repair Brooklyn is your trusted solution for all things appliance-related. Serving Brooklyn and all NYC boroughs with fast, affordable and expert appliance repair from Rockaway Pkwy, Brooklyn.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#" onclick="showPage('home',null);return false;">Home</a></li>
+        <li><a href="#" onclick="showPage('about',null);return false;">About Us</a></li>
+        <li><a href="#" onclick="showPage('services',null);return false;">Services</a></li>
+        <li><a href="#" onclick="showPage('contact',null);return false;">Contact</a></li>
+        <li><a href="http://proappliancerepairbrooklyn.com/" target="_blank" rel="noopener">Our Website</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="#" onclick="showPage('services',null);return false;">Refrigerator Repair</a></li>
+        <li><a href="#" onclick="showPage('services',null);return false;">Washer & Dryer Repair</a></li>
+        <li><a href="#" onclick="showPage('services',null);return false;">Oven & Stove Repair</a></li>
+        <li><a href="#" onclick="showPage('services',null);return false;">Dishwasher Repair</a></li>
+        <li><a href="#" onclick="showPage('services',null);return false;">Appliance Maintenance</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" fill="none" stroke="#0099cc" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>1433-1447 Rockaway Pkwy, Suite 1441, Brooklyn, NY 11236</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" fill="none" stroke="#0099cc" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <a href="tel:+19294376568" style="color:#94a3b8">929-437-6568</a>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" fill="none" stroke="#0099cc" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Mon – Sun: 8:00 AM – 6:00 PM</span>
+      </div>
+      <div class="footer-contact-item">
+        <svg width="16" height="16" fill="none" stroke="#0099cc" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="http://proappliancerepairbrooklyn.com/" style="color:#94a3b8">proappliancerepairbrooklyn.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 PRO Appliance Repair Brooklyn. All rights reserved.</span>
+    <span>Appliance Repair Service | Expert Appliance Repair | Brooklyn, NY</span>
+  </div>
+</footer>
+
+<!-- FLOATING CALL -->
+<a class="float-call" href="tel:+19294376568" aria-label="Call PRO Appliance Repair Brooklyn">
+  <svg width="26" height="26" fill="none" stroke="#fff" stroke-width="2.2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+</a>
+
+<script>
+function showPage(id, linkEl) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.nav-link').forEach(a => a.classList.remove('active'));
+  if (linkEl) { linkEl.classList.add('active'); }
+  else {
+    document.querySelectorAll('.nav-link').forEach(a => {
+      if (a.getAttribute('onclick') && a.getAttribute('onclick').includes("'"+id+"'")) a.classList.add('active');
+    });
+  }
+  window.scrollTo({top:0,behavior:'smooth'});
+  if (document.getElementById('mainNav').classList.contains('open')) toggleNav();
+}
+function toggleNav() {
+  document.getElementById('mainNav').classList.toggle('open');
+}
+function toggleFaq(el) {
+  const ans = el.nextElementSibling;
+  const arrow = el.querySelector('.faq-arrow');
+  const isOpen = ans.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-arrow').forEach(a => a.classList.remove('open'));
+  if (!isOpen) { ans.classList.add('open'); arrow.classList.add('open'); }
+}
+function handleSubmit(btn) {
+  btn.textContent = 'Booking Confirmed! We will contact you shortly.';
+  btn.style.background = '#0077aa';
+  btn.disabled = true;
+}
+</script>
+</body>
+</html>
